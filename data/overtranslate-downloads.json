@@ -1,11 +1,11 @@
 {
   "id": "overtranslate-downloads",
   "repo": "asd880921/OverTranslate",
-  "total": 1180,
+  "total": 1186,
   "perAsset": {
-    "OverTranslate-win-Portable.zip": 366,
-    "OverTranslate-win-Setup.exe": 814
+    "OverTranslate-win-Portable.zip": 369,
+    "OverTranslate-win-Setup.exe": 817
   },
-  "releaseCount": 30,
-  "updatedAt": "2026-09-08T15:53:00.648Z"
+  "releaseCount": 31,
+  "updatedAt": "2026-09-08T18:39:55.795Z"
 }
