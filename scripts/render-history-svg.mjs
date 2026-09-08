@@ -188,7 +188,10 @@ function embedIcon(markup, x, yTop, size) {
     .slice(markup.indexOf('>', open) + 1, close)
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/id="([^"]+)"/g, 'id="icon-$1"')
-    .replace(/url\(#([^)]+)\)/g, 'url(#icon-$1)');
+    .replace(/url\(#([^)]+)\)/g, 'url(#icon-$1)')
+    // <use href="#…"> 也要一起改。漏掉的話前綴過的 id 就沒人指得到，
+    // 那一段圖形會靜靜消失——不報錯，只是畫不出來。
+    .replace(/(\sxlink:href|\shref)="#([^"]+)"/g, '$1="#icon-$2"');
   return `<svg x="${x}" y="${yTop}" width="${size}" height="${size}" viewBox="${viewBox}" overflow="hidden">${inner}</svg>`;
 }
 
